@@ -1,0 +1,10 @@
+*.cache
+*.suo
+*.db
+*.csproj.user
+*.pdb
+*.force
+/UNSECURED_UI/bin/
+/UNSECURED_UI/obj/
+/WSFED/bin
+/WSFED/obj
