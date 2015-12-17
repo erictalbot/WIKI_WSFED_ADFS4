@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using WSFED.Authorizations.WebApi;
 
 namespace WSFED.Controllers
 {
@@ -13,6 +10,7 @@ namespace WSFED.Controllers
     public class ValuesController : ApiController
     {
         // GET: api/Values
+        [ClaimAuthorize(ClaimToCheck = "MyEmail@address.com")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
