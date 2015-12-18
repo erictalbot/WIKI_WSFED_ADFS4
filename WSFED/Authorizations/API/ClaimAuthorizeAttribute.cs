@@ -24,10 +24,7 @@ namespace WSFED.Authorizations.WebApi
 
         protected override bool IsAuthorized(HttpActionContext actionContext)
         {
-            // Action context will not contain the claim or the method decoration.
-            // Samething applies to OnAuthorization, which receives an actionContext. Therefore the most simple this to do is to 
-            // Get all method within the same controller to use the same decoration.
-
+    
             IPrincipal client = Thread.CurrentPrincipal;
 
             string claimToCheck = actionContext.ActionDescriptor.GetCustomAttributes<ClaimAuthorizeAttribute>().First().ClaimToCheck;

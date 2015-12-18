@@ -19,9 +19,6 @@ namespace WSFED.Authorizations.MVC
 
         #region ctor
 
-        /// <summary>
-        /// This ctor is called by  filters.Add(new ClaimAuthorizeAttribute()); in UI.FilterConfig.cs
-        /// </summary>
         public ClaimAuthorizeAttribute()
         {
         }
